@@ -8,7 +8,7 @@ export const Blog = ()=>{
     const {loading, blog} = useBlog({
         id:id || ""
     });
-    if(loading){
+    if(loading || !blog){
         return <div className="w-[1/2] lg:mx-[25%] mt-[7rem]">
             <BlogSkeleton/>
         </div>
